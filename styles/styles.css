@@ -1,0 +1,74 @@
+body {
+  color: white;
+  background-color: #003643;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 25vw;
+  margin: 0 auto;
+}
+#myForm {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 50vh;
+}
+#copyButton {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 10px 0px;
+  color: #43cfb5;
+}
+#submitButton {
+  display: flex;
+  justify-content: center;
+  background-color: #43cfb5;
+  border-width: 0;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+#result {
+  margin-top: 30px;
+  padding: 15px;
+  border: solid #43cfb5 5px;
+  border-radius: 20px;
+}
+.inputBox {
+  background-color: #43cfb5;
+  padding: 15px 20px;
+  width: 50px;
+  border-radius: 25px 0px 0px 25px;
+}
+.textBox {
+  border-width: 0;
+  border-radius: 0 25px 25px 0;
+  padding-left: 10px;
+}
+.inputWrapper {
+  display: flex;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    max-width: 100vw;
+  }
+}
