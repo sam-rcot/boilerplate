@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: sans-serif;
 }
 .wrapper {
   display: none;
@@ -56,11 +57,13 @@ body {
   padding: 15px 20px;
   width: 50px;
   border-radius: 25px 0px 0px 25px;
+  font-family: inherit;
 }
 .textBox {
   border-width: 0;
   border-radius: 0 25px 25px 0;
   padding-left: 10px;
+  width: 200px;
 }
 .inputWrapper {
   display: flex;
