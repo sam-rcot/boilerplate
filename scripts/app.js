@@ -6,7 +6,7 @@ const getFormValues = () => {
 };
 
 const generatePassword = () => {
-    const chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const chars = "0123456789abcdefghijklmnopqrstuvwxyz!_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const passwordLength = 14;
     let password = "";
     for (let i = 0; i < passwordLength; i++) {
