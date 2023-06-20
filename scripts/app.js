@@ -12,6 +12,10 @@ const generatePassword = () => {
     for (let i = 0; i < passwordLength; i++) {
         let randomNumber = Math.floor(Math.random() * chars.length);
         password += chars[randomNumber];
+        
+    }
+    if (!password.includes("_") | !password.includes("!")) {
+        password += "_"
     }
     return password;
 };
