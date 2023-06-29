@@ -31,7 +31,7 @@ Please login on a fresh web browser using the access credentials shown below and
 <strong>Temporary password:</strong> <span id="tempPasswordSpan" ondblclick="highlightText(this)">${tempPassword}</span><br>
 <br>
 Kind Regards,<br>
-Web team`;
+Web Team`;
     document.querySelector(".wrapper").style.display = "flex";
 };
 
