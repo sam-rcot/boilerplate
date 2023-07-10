@@ -15,7 +15,12 @@ const generatePassword = () => {
         
     }
     if (!password.includes("_") | !password.includes("!")) {
-        password += "_"
+        if (Math.random() > 0.5) {
+            password += "_"
+        } else (
+            password += "!"
+        )
+        
     }
     return password;
 };
@@ -25,7 +30,7 @@ const setResultText = ({ email, capitalized, tempPassword }) => {
     resultElement.innerHTML = `Hello ${capitalized},<br>
 <br>
 Apologies for the issues you have been having logging in. I have now updated your account and created a new temporary password.<br>
-Please login on a fresh web browser using the access credentials shown below and amend your password to something more secure.<br>
+Please login to the <a href="https://portal.rcot.co.uk/"><strong>RCOT Portal</strong></a> on a fresh web browser using the access credentials shown below and amend your password to something more secure.<br>
 <br>
 <strong>Username:</strong> <span id="emailSpan" ondblclick="highlightText(this)">${email}</span><br>
 <strong>Temporary password:</strong> <span id="tempPasswordSpan" ondblclick="highlightText(this)">${tempPassword}</span><br>
