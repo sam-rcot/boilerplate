@@ -7,7 +7,7 @@ const getFormValues = () => {
 
 const generatePassword = () => {
     const chars = "0123456789abcdefghijklmnopqrstuvwxyz!_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const passwordLength = 14;
+    const passwordLength = 16;
     let password = "";
     for (let i = 0; i < passwordLength; i++) {
         let randomNumber = Math.floor(Math.random() * chars.length);
@@ -30,7 +30,7 @@ const setResultText = ({ email, capitalized, tempPassword }) => {
     resultElement.innerHTML = `Hello ${capitalized},<br>
 <br>
 Apologies for the issues you have been having logging in. I have now updated your account and created a new temporary password.<br>
-Please login to the <a href="https://portal.rcot.co.uk/"><strong>RCOT Portal</strong></a> on a fresh web browser using the access credentials shown below and amend your password to something more secure.<br>
+Please login to the <a href="https://portal.rcot.co.uk/"><strong>RCOT Portal</strong></a> (https://portal.rcot.co.uk/) on a fresh web browser using the access credentials shown below and amend your password to something more secure.<br>
 <br>
 <strong>Username:</strong> <span id="emailSpan" ondblclick="highlightText(this)">${email}</span><br>
 <strong>Temporary password:</strong> <span id="tempPasswordSpan" ondblclick="highlightText(this)">${tempPassword}</span><br>
