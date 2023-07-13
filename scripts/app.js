@@ -6,25 +6,33 @@ const getFormValues = () => {
 };
 
 const generatePassword = () => {
-    const chars = "0123456789abcdefghijklmnopqrstuvwxyz!_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const passwordLength = 16;
-    let password = "";
-    for (let i = 0; i < passwordLength; i++) {
-        let randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars[randomNumber];
+    let password = ""
+    const loop = (chars, passwordLength) => {
+        for (let i = 0; i < passwordLength; i++) {
+            let randomNumber = Math.floor(Math.random() * chars.length);
+            password += chars[randomNumber];
+        }
         
     }
-    if (!password.includes("_") | !password.includes("!")) {
-        if (Math.random() > 0.5) {
-            password += "_"
-        } else (
-            password += "!"
-        )
-        
+    const letters = () => {
+        const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        loop(chars, 10)
     }
-    return password;
+    const numbers = () => {
+        const chars = "0123456789"
+        loop(chars, 3)
+    }
+    const symbols = () => {
+        const chars = "-_!£"
+        loop(chars, 2)
+    }
+    
+    letters()
+    numbers()
+    symbols()
+    
+    return password.split('').sort(function(){return 0.5-Math.random()}).join('');
 };
-
 const setResultText = ({ email, capitalized, tempPassword }) => {
     const resultElement = document.getElementById("result");
     resultElement.innerHTML = `Hello ${capitalized},<br>
